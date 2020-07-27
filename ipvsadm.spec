@@ -1,6 +1,6 @@
 Name:             ipvsadm
 Version:          1.31
-Release:          1
+Release:          2
 Summary:          A utility to administer the IP virtual server services
 License:          GPLv2+
 URL:              https://kernel.org/pub/linux/utils/kernel/ipvsadm/
@@ -56,6 +56,12 @@ install -p -D -m 0600 %{SOURCE2} %{buildroot}%{_sysconfdir}/sysconfig/%{name}-co
 %{_mandir}/man8/*8*
 
 %changelog
+* Mon Jul 27 2020 zhouxuodng <zhouxudong8@huawei.com> - 1.31-2
+- Type: requirement
+- ID: NA
+- SUG: NA
+- DESC: add yaml
+
 * Mon Apr 20 2020 zhouxudong <zhouxudong8@huawei.com> - 1.31-1
 - Type: requirement
 - ID: NA
