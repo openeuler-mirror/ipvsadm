@@ -1,6 +1,6 @@
 Name:             ipvsadm
 Version:          1.31
-Release:          5
+Release:          6
 Summary:          A utility to administer the IP virtual server services
 License:          GPLv2+
 URL:              https://kernel.org/pub/linux/utils/kernel/ipvsadm/
@@ -9,6 +9,7 @@ Source1:          ipvsadm.service
 Source2:          ipvsadm-config
 
 Patch6000:        ipvsadm-use-CFLAGS-and-LDFLAGS-environment-variables.patch
+Patch6001:        support-specify-cc.patch
 
 BuildRequires:    gcc libnl3-devel popt-devel systemd
 Requires(post):   systemd
@@ -56,6 +57,12 @@ install -p -D -m 0600 %{SOURCE2} %{buildroot}%{_sysconfdir}/sysconfig/%{name}-co
 %{_mandir}/man8/*8*
 
 %changelog
+* Fri Apr 14 2023 jammyjellyfish <jammyjellyfish255@outlook.com> - 1.31-6
+- Type: requirement
+- ID: NA
+- SUG: NA
+- DESC: Support specify CC
+
 * Fri Apr 22 2022 kwb0523 <kwb0523@163.com> - 1.31-5
 - Type: requirement
 - ID: NA
